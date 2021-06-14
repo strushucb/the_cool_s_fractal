@@ -76,6 +76,7 @@ function coolsSubdivide(numTimes) {
 	var pts = ks_data;
 	var newpts = []
 	for (j = 0; j < numTimes; j++) {
+		newpts = [];
 		for (i = pts.length-1; i > 0; i--) {
 			var rads = Math.atan2(pts[i-1].x - pts[i].x, pts[i-1].y - pts[i].y);
 			var centerx = (pts[i].x + pts[i-1].x) / 2;
