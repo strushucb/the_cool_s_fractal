@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ultimate Cool S</title>
+
+<link href="http://fonts.googleapis.com/css?family=Comfortaa&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="./css/fractalvis.css" rel="stylesheet" type="text/css">
+<script src="./js/d3.v3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+<div class="container coolsfractal-container">
+	<div class="content-item">
+		<h1>The Cool S Fractal</h1>
+		<p>The Ultimate Cool S.</p>
+		<div class="sliderContainer">
+			<input class="slider" id="coolsfractal-slider" type="range" min="0" max="3" value="0" />
+			<div class="output" id="coolsfractal-output">0</div>
+		</div>
+		<div id="coolsfractal-vis"></div>
+	</div>
+</div>
+<div class="container coolstrifractal-container">
+	<div class="content-item">
+		<h1>The Cool S Triangle Fractal</h1>
+		<p>The Second Coolest S.</p>
+		<div class="sliderContainer">
+			<input class="slider" id="coolstri-slider" type="range" min="0" max="5" value="0" />
+			<div class="output" id="coolstri-output">0</div>
+		</div>
+		<div id="coolstri-vis"></div>
+	</div>
+</div>
+<div id="title-container">
+	<div class="content-item">
+		<p>This visualization was made using D3.js & JavaScript and built upon the visualizations created by <a href="http://www.andrewtubelli.com/vis/fractals.html">Andrew Tubelli</a>. Check out the code available at: </p>
+	</div>
+</div>
+
+
+
+<div class="footer-container">
+	<div class="content-item">
+		<p>Copyright &#169; 2021, <a href="http://www.stevetrush.com">Steve Trush</a>, derived from <a href="http://www.andrewtubelli.com/vis/fractals.html">Andrew Tubelli's D3 Fractals.</a></p>
+	</div>
+</div>
+<script src="./js/coolsfractal.js"></script>
+<script src="./js/coolstri.js"></script>
+</body>
+</html>
