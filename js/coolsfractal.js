@@ -64,19 +64,10 @@ function coolsDraw(data) {
 
 
 function rotate(cx, cy, x, y, radians) {
-//   console.log("rotate: cx: "+cx+", cy: "+cy+", x: "+x+", y: "+y+", radians: "+radians);
-  // nx = 0;
-  // ny = 0;
-   //if(radians == 0){
-  //   nx = Math.round(x);
-  //   ny = Math.round(y);
-  // } else {
      cos = Math.cos(radians),
       sin = Math.sin(radians),
       nx = Math.round((cos * (x - cx)) + (sin * (y - cy)) + cx),
       ny = Math.round((cos * (y - cy)) - (sin * (x - cx)) + cy);
-  // }
- //  console.log("new x: "+nx+", new y: "+ny);
    return {x:nx,y:ny};
 }
 
@@ -94,7 +85,7 @@ function coolsSubdivide(numTimes) {
 			var dy = pts[i].y - pts[i-1].y;
 			var w = Math.sqrt( dx*dx + dy*dy );
 			var h = -w;
-			console.log("Make a New S with radians: "+rads+", width: "+w+", height:"+h+", centerx: "+centerx+", centery: "+centery);
+//			console.log("Make a New S with radians: "+rads+", width: "+w+", height:"+h+", centerx: "+centerx+", centery: "+centery);
 
 //Top of S
 			 var p2 = rotate(centerx, centery, centerx, centery-(h/2), rads); 
