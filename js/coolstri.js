@@ -47,8 +47,8 @@ coolstriDraw(kstri_newData);
 function coolstriDraw(data) {
 	d3.select("#coolstri-vis").selectAll("path").remove();
 
-	var x = d3.scale.linear().domain([0, 800]).range([100, 700]);	
-	var y = d3.scale.linear().domain([0, 800]).range([600, 50]);
+	var x = d3.scale.linear().domain([0, ks_width]).range([ks_width * 1 / 8, ks_width * 7 / 8]);	
+	var y = d3.scale.linear().domain([0, ks_height]).range([ks_width * .75, ks_width * 1 / 16]);
 
 	var line = d3.svg.line()
 		.x(function(d, i) { return x(d.x); })
