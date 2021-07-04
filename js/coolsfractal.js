@@ -57,9 +57,9 @@ function coolsDraw(data) {
 
 	var path = ks_svg.append("path")
 		.attr("d", line(data) )
-		.attr("stroke", "#000000")
+		.attr("stroke", '#'+Math.floor(Math.random()*16777215).toString(16))
 		.attr("stroke-width", 2)
-		.attr("fill", "#ffffffff");
+		.attr("fill", '#'+Math.floor(Math.random()*16777215).toString(16));
 }
 
 

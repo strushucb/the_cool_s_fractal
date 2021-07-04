@@ -57,9 +57,9 @@ function coolstriDraw(data) {
 
 	var path = kstri_svg.append("path")
 		.attr("d", line(data) )
-		.attr("stroke", "#000000")
+		.attr("stroke", '#'+Math.floor(Math.random()*16777215).toString(16))
 		.attr("stroke-width", 2)
-		.attr("fill", "#ffffff");
+		.attr("fill", '#'+Math.floor(Math.random()*16777215).toString(16));
 }
 
 /* SUBDIVIDE FUNCTION */
