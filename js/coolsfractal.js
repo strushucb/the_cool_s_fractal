@@ -41,10 +41,10 @@ ks_data =
 reload();
 
 var ks_newData = coolsSubdivide(0);
-coolsDraw(ks_newData);
+coolsDraw(ks_newData, 0);
 
 /* DRAW FUNCTION */
-function coolsDraw(data) {
+function coolsDraw(data, ks_value) {
 	d3.select("#coolsfractal-vis").selectAll("path").remove();
 
 	var x = d3.scale.linear().domain([0, ks_width]).range([ks_width * 1 / 8, ks_width * 7 / 8]);	
@@ -58,7 +58,7 @@ function coolsDraw(data) {
 	var path = ks_svg.append("path")
 		.attr("d", line(data) )
 		.attr("stroke", '#'+Math.floor(Math.random()*16777215).toString(16))
-		.attr("stroke-width", 2)
+		.attr("stroke-width", ks_value < 3 ? 2 : 1)
 		.attr("fill", '#'+Math.floor(Math.random()*16777215).toString(16));
 }
 
@@ -144,7 +144,7 @@ $("#coolsfractal-slider").on("change mousemove", function() {
 		reload();
 
 		ks_newData = coolsSubdivide(ks_value);
-		coolsDraw(ks_newData);
+		coolsDraw(ks_newData,ks_value);
 	}
 
 });
